@@ -1,0 +1,286 @@
+# Guest class
+class Guest:
+    def __init__(self, first_name, last_name, guest_id, email, address, phone_number):
+        self.__firstName = first_name  # Private attribute
+        self.__lastName = last_name    # Private attribute
+        self.__guestID = guest_id      # Private attribute
+        self.__email = email           # Private attribute
+        self.__address = address       # Private attribute
+        self.__phoneNumber = phone_number  # Private attribute
+    
+    # Public Getter and Setter methods using camelCase
+    def getFirstName(self):
+        return self.__firstName
+    
+    def setFirstName(self, first_name):
+        self.__firstName = first_name
+    
+    def getLastName(self):
+        return self.__lastName
+    
+    def setLastName(self, last_name):
+        self.__lastName = last_name
+    
+    def getGuestID(self):
+        return self.__guestID
+    
+    def setGuestID(self, guest_id):
+        self.__guestID = guest_id
+    
+    def getEmail(self):
+        return self.__email
+    
+    def setEmail(self, email):
+        self.__email = email
+    
+    def getAddress(self):
+        return self.__address
+    
+    def setAddress(self, address):
+        self.__address = address
+    
+    def getPhoneNumber(self):
+        return self.__phoneNumber
+    
+    def setPhoneNumber(self, phone_number):
+        self.__phoneNumber = phone_number
+    
+    # Public methods
+    def login(self):
+        # This function handles guest login
+        pass
+
+    def updateProfile(self):
+        # This function updates guest profile details
+        pass
+
+
+# Reservation class
+class Reservation:
+    def __init__(self, reservation_id, guest_id, room_number, checkin_date, checkout_date, total_amount):
+        self.__reservationID = reservation_id  # Private attribute
+        self.__guestID = guest_id              # Private attribute
+        self.__roomNumber = room_number        # Private attribute
+        self.__checkinDate = checkin_date      # Private attribute
+        self.__checkoutDate = checkout_date    # Private attribute
+        self.__totalAmount = total_amount      # Private attribute
+    
+    # Public Getter and Setter methods using camelCase
+    def getReservationID(self):
+        return self.__reservationID
+    
+    def setReservationID(self, reservation_id):
+        self.__reservationID = reservation_id
+    
+    def getGuestID(self):
+        return self.__guestID
+    
+    def setGuestID(self, guest_id):
+        self.__guestID = guest_id
+    
+    def getRoomNumber(self):
+        return self.__roomNumber
+    
+    def setRoomNumber(self, room_number):
+        self.__roomNumber = room_number
+    
+    def getCheckinDate(self):
+        return self.__checkinDate
+    
+    def setCheckinDate(self, checkin_date):
+        self.__checkinDate = checkin_date
+    
+    def getCheckoutDate(self):
+        return self.__checkoutDate
+    
+    def setCheckoutDate(self, checkout_date):
+        self.__checkoutDate = checkout_date
+    
+    def getTotalAmount(self):
+        return self.__totalAmount
+    
+    def setTotalAmount(self, total_amount):
+        self.__totalAmount = total_amount
+    
+    # Public methods
+    def confirm(self):
+        # This function confirms the reservation
+        pass
+
+    def cancel(self):
+        # This function cancels the reservation
+        pass
+
+
+# Payment class
+class Payment:
+    def __init__(self, payment_id, reservation_id, amount, payment_date, payment_method, transaction_id):
+        self.__paymentID = payment_id         # Private attribute
+        self.__reservationID = reservation_id # Private attribute
+        self.__amount = amount                # Private attribute
+        self.__paymentDate = payment_date     # Private attribute
+        self.__paymentMethod = payment_method # Private attribute
+        self.__transactionID = transaction_id # Private attribute
+    
+    # Public Getter and Setter methods using camelCase
+    def getPaymentID(self):
+        return self.__paymentID
+    
+    def setPaymentID(self, payment_id):
+        self.__paymentID = payment_id
+    
+    def getReservationID(self):
+        return self.__reservationID
+    
+    def setReservationID(self, reservation_id):
+        self.__reservationID = reservation_id
+    
+    def getAmount(self):
+        return self.__amount
+    
+    def setAmount(self, amount):
+        self.__amount = amount
+    
+    def getPaymentDate(self):
+        return self.__paymentDate
+    
+    def setPaymentDate(self, payment_date):
+        self.__paymentDate = payment_date
+    
+    def getPaymentMethod(self):
+        return self.__paymentMethod
+    
+    def setPaymentMethod(self, payment_method):
+        self.__paymentMethod = payment_method
+    
+    def getTransactionID(self):
+        return self.__transactionID
+    
+    def setTransactionID(self, transaction_id):
+        self.__transactionID = transaction_id
+    
+    # Public methods
+    def processPayment(self):
+        # This function processes the payment
+        pass
+
+
+# Hotel class
+class Hotel:
+    def __init__(self, hotel_id, star_rating, name, address, phone_line, amenities):
+        self.__hotelID = hotel_id        # Private attribute
+        self.__starRating = star_rating  # Private attribute
+        self.__name = name               # Private attribute
+        self.__address = address         # Private attribute
+        self.__phoneLine = phone_line    # Private attribute
+        self.__amenities = amenities     # Private attribute
+    
+    # Public Getter and Setter methods using camelCase
+    def getHotelID(self):
+        return self.__hotelID
+    
+    def setHotelID(self, hotel_id):
+        self.__hotelID = hotel_id
+    
+    def getStarRating(self):
+        return self.__starRating
+    
+    def setStarRating(self, star_rating):
+        self.__starRating = star_rating
+    
+    def getName(self):
+        return self.__name
+    
+    def setName(self, name):
+        self.__name = name
+    
+    def getAddress(self):
+        return self.__address
+    
+    def setAddress(self, address):
+        self.__address = address
+    
+    def getPhoneLine(self):
+        return self.__phoneLine
+    
+    def setPhoneLine(self, phone_line):
+        self.__phoneLine = phone_line
+    
+    def getAmenities(self):
+        return self.__amenities
+    
+    def setAmenities(self, amenities):
+        self.__amenities = amenities
+    
+    # Public methods
+    def addRoom(self):
+        # This function adds a room to the hotel
+        pass
+
+
+# RoomService class
+class RoomService:
+    def __init__(self, room_service_id, reservation_id, items, total_price, order_status, delivery_time):
+        self.__roomServiceID = room_service_id  # Private attribute
+        self.__reservationID = reservation_id    # Private attribute
+        self.__items = items                     # Private attribute
+        self.__totalPrice = total_price          # Private attribute
+        self.__orderStatus = order_status        # Private attribute
+        self.__deliveryTime = delivery_time      # Private attribute
+    
+    # Public Getter and Setter methods using camelCase
+    def getRoomServiceID(self):
+        return self.__roomServiceID
+    
+    def setRoomServiceID(self, room_service_id):
+        self.__roomServiceID = room_service_id
+    
+    def getReservationID(self):
+        return self.__reservationID
+    
+    def setReservationID(self, reservation_id):
+        self.__reservationID = reservation_id
+    
+    def getItems(self):
+        return self.__items
+    
+    def setItems(self, items):
+        self.__items = items
+    
+    def getTotalPrice(self):
+        return self.__totalPrice
+    
+    def setTotalPrice(self, total_price):
+        self.__totalPrice = total_price
+    
+    def getOrderStatus(self):
+        return self.__orderStatus
+    
+    def setOrderStatus(self, order_status):
+        self.__orderStatus = order_status
+    
+    def getDeliveryTime(self):
+        return self.__deliveryTime
+    
+    def setDeliveryTime(self, delivery_time):
+        self.__deliveryTime = delivery_time
+    
+    # Public methods
+    def processOrder(self):
+        # This function processes the room service order
+        pass
+
+
+# Create objects 
+guest = Guest("Ahmed", "Alblooshi", 1, "code01ahmad@gmail.com", "Latafah Street, Abu dhabi", 202108026)
+reservation = Reservation(205, 1, 305, "2024-09-30", "2024-10-2", 1500.0)
+payment = Payment(201, 205, 1500.0, "2024-09-30", "Credit Card", "CIA12345")
+hotel = Hotel(1, 5, "Bab Alshams", "Downtown Dubai", 987654321, "Free WiFi, Pool, Spa")
+room_service = RoomService(305,301, "Burger, Fries", 70.0, "Delivered", 30)
+
+# Display information
+print(f"Guest: {guest.getFirstName()} {guest.getLastName()}, Email: {guest.getEmail()}")
+print(f"Reservation: Room {reservation.getRoomNumber()}, Check-in: {reservation.getCheckinDate()}, Total: {reservation.getTotalAmount()}")
+print(f"Payment: Amount: {payment.getAmount()}, Method: {payment.getPaymentMethod()}")
+print(f"Hotel: {hotel.getName()}, Star Rating: {hotel.getStarRating()}, Amenities: {hotel.getAmenities()}")
+print(f"Room Service: Items: {room_service.getItems()}, Total Price: {room_service.getTotalPrice()}")
